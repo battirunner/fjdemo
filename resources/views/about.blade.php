@@ -895,7 +895,7 @@
                             <!--end col-md-4-->
                             <div class="col-md-8">
                                 <h3>コンタクト</h3>
-                                <form id="form-contact" method="post" class="clearfix ts-form ts-form-email" data-php-path="assets1/php/email.php">
+                                <form id="form-contact" method="post" class="clearfix ts-form ts-form-email" action="/contact/send">
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6">
                                             <div class="form-group">
