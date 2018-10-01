@@ -14,6 +14,9 @@
 	<title>私たちについて</title>
 
 </head>
+
+
+
 <body data-spy="scroll" data-target=".navbar" class="has-loading-screen">
     <div class="ts-page-wrapper" id="page-top">
         <!--NAVIGATION ******************************************************************************************-->
@@ -895,7 +898,7 @@
                             <!--end col-md-4-->
                             <div class="col-md-8">
                                 <h3>コンタクト</h3>
-                                <form id="form-contact" method="post" class="clearfix ts-form ts-form-email" data-php-path="assets1/php/email.php">
+                                <form id="form-contact" action="" method="post" class="clearfix ts-form ts-form-email" data-php-path="assets1/php/email.php">
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6">
                                             <div class="form-group">
@@ -905,7 +908,7 @@
                                             <!--end form-group -->
                                         </div>
                                         <!--end col-md-6 col-sm-6 -->
-                                        <div class="col-md-6 col-sm-6">
+                                        <div class = "col-md-6 col-sm-6">
                                             <div class="form-group">
                                                 <label for="form-contact-email">Eメール *</label>
                                                 <input type="email" class="form-control" id="form-contact-email" name="email" placeholder="Email" required>
@@ -917,14 +920,14 @@
                                     <!--end row -->
                                     <div class="form-group">
                                         <label for="form-contact-subject">お問い合わせ内容 *</label>
-                                        <input type="email" class="form-control" id="form-contact-subject" name="subject" placeholder="Subject" required>
+                                        <input type="text" class="form-control" id="form-contact-subject" name="subject" placeholder="Subject" required>
                                     </div>
                                     <!--end form-group -->
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="form-contact-message">メッセージ*</label>
-                                                <textarea class="form-control" id="form-contact-message" rows="5" name="message" placeholder="Message" required></textarea>
+                                                <textarea class="form-control" id="form-contact-message" rows="5" name="msg" placeholder="Message" required></textarea>
                                             </div>
                                             <!--end form-group -->
                                         </div>
