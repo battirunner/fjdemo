@@ -8,18 +8,26 @@ class PageController extends Controller
 {
     public function contactSend()
     {
-        $request = request()->all();
-        dd($request);
-        \Mail::send('emails.contact', ['subject' => $subject, 'message' => $message], function($message) use ($request) {
-            $message->from('me@gmail.com', 'Christian Nwamba');
+        $this->validate(request(), [
+            'name' => 'required',
+            'email' => 'required|email|max:255',
+            'subject' => 'required',
+            'message' => 'required',
+        ]);
+        $messages = request('message');
+        $request = request();
+        
+        \Mail::send('emails.send', ['messages' => $messages], function($message) use ($request) {
+            // User details attach
+            $message->from($request->email, $request->name);
 
-            $message->to('chrisn@scotch.io');
-
-            //Attach file
-            $message->attach($attach);
+            // Send the email to following address
+            $message->to(env('MAIL_SEND_TO', 'fahimmohip@gmail.com'));
 
             //Add a subject
-            $message->subject("Hello from Scotch");
+            $message->subject($request->subject);
         });
+
+        return redirect()->back()->with('message', 'Email has been sent successfully');
     }
 }
