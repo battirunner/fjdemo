@@ -898,7 +898,8 @@
                             <!--end col-md-4-->
                             <div class="col-md-8">
                                 <h3>コンタクト</h3>
-                                <form id="form-contact" action="" method="post" class="clearfix ts-form ts-form-email" data-php-path="assets1/php/email.php">
+                                <form id="form-contact" action="/contact/send" method="post" class="clearfix ts-form" data-php-path="assets1/php/email.php">
+                                    {{ csrf_field() }}
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6">
                                             <div class="form-group">
@@ -927,7 +928,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="form-contact-message">メッセージ*</label>
-                                                <textarea class="form-control" id="form-contact-message" rows="5" name="msg" placeholder="Message" required></textarea>
+                                                <textarea class="form-control" id="form-contact-message" rows="5" name="message" placeholder="Message" required></textarea>
                                             </div>
                                             <!--end form-group -->
                                         </div>

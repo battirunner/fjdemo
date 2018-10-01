@@ -25,6 +25,7 @@ Route::get('/about', function () {
 
 Route::get('send', 'mailagain@send');
 Route::get('email', 'mailagain@email');
+Route::post('contact/send', 'PageController@contactSend');
 
 Auth::routes();
 
